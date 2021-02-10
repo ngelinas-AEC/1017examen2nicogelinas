@@ -1,5 +1,11 @@
 # 1017examen2nicogelinas
 
+## Commande Question 1
+
+```
+vue create 1017examen2nicogelinas
+```
+
 ## Project setup
 ```
 npm install
