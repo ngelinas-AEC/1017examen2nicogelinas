@@ -4,7 +4,7 @@
           <h1>Mon Profil</h1>               
 
     <div class="post-container"> 
-      <div class="post-thumb"><img src="../assets/logo.png" height="300px"/></div>
+      <div class="post-thumb"><img src="../assets/icon.png" height="300px"/></div>
       <div class="post-content">
         <div class="presentation">
           <p>Bonjour, je m'appelle </p>
@@ -28,7 +28,7 @@
 
     <div class="post-container ">
       <h2>Mes compétences</h2>
-        <div class="formations">
+        <div class="competences">
           <ul>
             <li v-for="competence in competences" :key="competence">{{competence}}</li>
           </ul>
@@ -49,7 +49,7 @@
     },
     data () {
       return {
-          competences:[ "HTML5", "CSS3/SASS", "BootStrap", "javaScript", "jQuery", "typeScript", "React-js", "Angular", "Vue"]
+          competences:[ "ANDROID STUDIO KOTLIN ECLIPSE DELPHI", "JAVASCRIPT/TYPESCRIPT, JQUERY, JQUERY MOBILE, PHP", "GOOGLE (FIREBASE-ANALYTICS) VMWARE(AIRWATCH) REST NODE.JS", "HTML CSS SASS SCSS BOOTSTRAP", "SQLSERVER SYBASE MYSQL ORACLE MONGODB", "REACT ANGULAR VUE", "AGILE-SPRING XML"]
       }
     },
     methods: {
@@ -64,11 +64,7 @@
 </script>
 
 <style scoped >
-  .profile {
-  }
-
-
-  .post-container {
+   .post-container {
     margin: 20px;  
     border: 5px solid #333;
     overflow: auto
