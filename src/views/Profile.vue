@@ -1,47 +1,53 @@
 <template lang="html">
 
   <section class="profile">
-          <h1>Mon Profil</h1>               
+    
+    <h1>{{'profile' | selectLangue(langue)}}</h1>
 
-    <div class="post-container"> 
-      <div class="post-thumb"><img src="../assets/icon.png" height="300px"/></div>
-      <div class="post-content">
-        <div class="presentation">
-          <p>Bonjour, je m'appelle </p>
-          <p>Je suis un Développeur</p>
-        </div>
+    <div class="app-gridview">
+      <div class="grid-wrapper">
+          <div class="grid-row">
+              <p>{{"bonjour" | selectLangue(langue)}}</p>
+              <p>{{"jesuis" | selectLangue(langue)}}</p>
+              <p>{{"texteapropos" | selectLangue(langue)}}</p>
+              <div><img src="../assets/icon.png" height="200px"/></div>
+          </div>
       </div>
-    </div>
+    </div> 
+    
+    <div class="app-gridview">
+      <div class="grid-wrapper">
+          <div class="grid-row">
+            <h2>{{'formation' | selectLangue(langue)}}</h2>
+            <div class="formations">
+                <p>Attestation d’études collégiales en Développement WEB - Cégep Trois-Rivières</p>        
+                <p>Certificat en informatique appliquée (4128) - Université TÉLUQ</p>            
+                <p>Udacity Front-end Web Dev Plus - Udacity</p>            
+                <p>AEC-Développement d'applications Mobile - Cégep de Sainte-Foy </p>            
+                <p>Programme court en développement de logiciels - Université TÉLUQ</p>  
+                <p>Android Nanodegree by Google - Udacity</p>
+            </div>
+          </div>
+      </div>
+    </div> 
 
-    <div class="post-container ">
-      <h2>Mes formations</h2>
-        <div class="formations">
-          <ul>
-            <li>Attestation d’études collégiales en Développement WEB
-            Cégep Trois-Rivières, Trois-Rivières</li>
-          
-            <li>Attestation d’études ...</li>
-          
-          </ul>
-        </div>
-    </div>
-
-    <div class="post-container ">
-      <h2>Mes compétences</h2>
-        <div class="competences">
-          <ul>
-            <li v-for="competence in competences" :key="competence">{{competence}}</li>
-          </ul>
-        </div>
-    </div>
+    <div class="app-gridview">
+      <div class="grid-wrapper">
+          <div class="grid-row">
+          <h2>{{'competence' | selectLangue(langue)}}</h2>
+            <p v-for="competence in competences" :key="competence">{{competence}}</p>
+          </div>
+      </div>
+    </div> 
   </section>
     
 
 </template>
 
 <script lang="js">
-
+import {LanguesMixin}  from "../mixins/LanguesMixin";
   export default  {
+     mixins: [LanguesMixin],
     name: 'profile',
     props: [],
     mounted () {
@@ -88,5 +94,23 @@
 .presentation{
    margin: 20px
 }
+
+</style>
+
+
+<style scoped>
+.app-gridview {
+    margin: 20px;  
+    border: 5px solid #5597b4;
+    overflow: auto
+} 
+
+.grid-row > div {
+	padding: 10px 10px;
+  text-align: center;
+}
+
+
+
 
 </style>

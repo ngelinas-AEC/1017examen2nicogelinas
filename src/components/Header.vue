@@ -3,12 +3,9 @@
   <section class="header">
 
   <ul>
-      <div v-for="item in menu" :key="item.id+item.name">
-        <li v-if="item.name==='About'" style="float:right">        
-          <router-link class="link" :to="{path:item.name}"  tag="li">{{item.name}}</router-link>
-        </li>  
-        <li v-else>        
-          <router-link class="link" :to="{path:item.name}" tag="li">{{item.name}}</router-link>
+      <div v-for="select in menu" :key="select.id+select.name">
+        <li>        
+          <router-link class="link" :to="{path:select.name}" tag="li">{{select.name | selectLangue(langue)}}</router-link>
         </li>  
       </div>   
   </ul>
@@ -17,8 +14,10 @@
 
 
 <script lang="js">
+  import   {LanguesMixin}  from "../mixins/LanguesMixin";
 
   export default  {
+    mixins: [LanguesMixin],
     name: 'headerComponent',
     props: [],
     mounted () {
@@ -27,10 +26,10 @@
     data () {
       return {
           menu: [
-              {id:1, name: 'Accueil'},
-              {id:2, name: 'Projets'},
-              {id:3, name: 'Contact'},
-               {id:4, name: 'About'}
+              {id:1, name: 'accueil'},
+              {id:2, name: 'projet'},
+              {id:3, name: 'contact'},
+              {id:4, name: 'apropos'}
         ]     
       }
     },

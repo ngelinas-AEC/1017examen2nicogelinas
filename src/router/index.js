@@ -7,29 +7,30 @@ import Projet from '../views/Projet.vue';
 
 Vue.use(VueRouter)
 
+
 const routes = [
   {
     path: '/',
-    name: 'Accueil',
+    name: 'accueil',
     component: Accueil
   },
   {
-    path: '/Accueil',
-    name: 'Accueil',
+    path: '/accueil',
+    name: 'accueil',
     component: Accueil
   },
   {
-    path: '/Projets',
-    name: 'Projets',
+    path: '/projet',
+    name: 'projet',
     component: Projet
   },
   {
-    path: '/Contact',
-    name: 'Contact',
+    path: '/contact',
+    name: 'contact',
     component: Contact
   },
   {
-    path: '/about',
+    path: '/apropos',
     name: 'About',
     component: () => import('../views/About.vue')
   }

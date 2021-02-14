@@ -1,52 +1,39 @@
 <template lang="html">
 
   <section class="projet">
-     <div class="post-container ">
-      <h2>Mes projets</h2>
-          <div class="app-gridview">
-    <div class="grid-wrapper">
-
-        <div class="grid-row">
-            <div class="grid-header">Nom</div>
-            <div class="grid-header">Lien</div>
-        </div>
-
-        <!-- GridView structure -->
-        <div class="grid-row">
-        
-            <div class="list-row-item">
-                <li v-for="projet in projets" :key="projet">{{projet}}</li>
-            </div>
-            
-            <div class="list-row-item">
-                <li v-for="lien in liens" :key="lien">{{lien}}</li>
-            </div>
-            
-        </div>
-
-    </div>
-
-</div>
-  
-    </div>
+        <h1>{{'projetlabel' | selectLangue(langue)}}</h1>
+   <div class="app-gridview">
+      <div class="grid-wrapper">
+          <div class="grid-row"> 
+        <ul class='projets'>
+                    <li v-for="(projet, i) in projets" :key="i"> <a :href="projet.lien" target="_blank"> {{ projet.nom | selectLangue(langue)}} {{ projet.lien }}</a> </li>
+        </ul>
+         </div>
+      </div>
+    </div> 
 
   </section>
 
 </template>
 
 <script lang="js">
-
+  import {LanguesMixin}  from "../mixins/LanguesMixin";
   export default  {
+    mixins: [LanguesMixin],
     name: 'projetComponent',
+    
+    data () {
+      return {
+           projets: [
+              {id:1, nom:"portfolio", lien:"http://portfolio.nicogelinas.ca"},
+              {id:2, nom:"lecteurdenouvelles", lien:"https://github.com/ngelinas-AEC/AEC_Front_End/tree/master/programmation2/projet-final_Portfolio/"},
+              {ID:3, nom:"appvoyage", lien:"https://github.com/ngelinas-AEC/AEC_Front_End/tree/master/Programmation3/application-voyages/"}
+          ]
+      }
+    },
     props: [],
     mounted () {
 
-    },
-    data () {
-      return {
-          projets:[ "Portfolio", "Lecteur de nouvelles"],
-          liens:[ "http://portfolio.nicogelinas.ca", "http://https://github.com/ngelinas-AEC/AEC_Front_End/tree/master/Integration1/SiteWEB/Portfolio%20bootstrap"]
-      }
     },
     methods: {
 
@@ -68,16 +55,16 @@
 .grid-wrapper {
     display: table;
     
-    border: 4px solid #336699;
+    border: 4px solid #5597b4;
     border-radius: 6px;
     transition: all ease 0.5s;
 }
 
 .grid-header {
 	font-weight: bold;
-	background: #336699;
+	background: #5597b4;
 	color: white;
-	border-bottom: 4px solid #f6f6f6;
+	border-bottom: 4px solid #5597b4;
 }
 
 .grid-row {

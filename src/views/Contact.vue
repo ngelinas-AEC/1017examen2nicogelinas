@@ -2,35 +2,36 @@
 <template lang="html">
 <section class="contactComponent">
   <div class="container">
-    <h1>Contact</h1>
+    <h1>{{'contact' | selectLangue(langue)}}</h1>
     <div class='item'>
-      <label> {{ 'firstname' }} </label>
-      <input type="text" name="firstname" placeholder="Firstname"/>
+      <label> {{ 'nom' | selectLangue(langue)}} </label>
+      <input type="text" name="nom"/>
     </div>
     <div class='item'>
-      <label> {{ 'lastname' }} </label>
-      <input type="text" name="lastname" placeholder="Lastname"/>
+      <label> {{ 'prenom' | selectLangue(langue)}} </label>
+      <input type="text" name="prenom"/>
     </div>
     <div class='item'>
-    <label> {{ 'email' }} </label>
-    <input type="text" name="email" placeholder="Email"/>
+    <label> {{ 'courriel' | selectLangue(langue) }} </label>
+    <input type="text" name="courriel"/>
     </div>
+
     <div class='item'>
-      <label> {{ 'category' }} </label>
-      <select v-model="selected">
-        <option v-for="item in inventory" :value="item" :key="item.id">
-          {{ item.name }}
-        </option>
-      </select>
+      <label> {{ 'categorie' | selectLangue(langue) }} </label>
+         <select class="sel" name="categorie">
+            <option v-for="(option, i) in category" :key="i"> {{ option | selectLangue(langue) }}</option>
+         </select>
     </div>
-    <button type="button">Register</button>
   </div>
   </section>
 </template>
 
 <script lang="js">
 
+import   {LanguesMixin}  from "../mixins/LanguesMixin";
+
   export default  {
+    mixins: [LanguesMixin],
     name: 'contactComponent',
     props: [],
     mounted () {
@@ -38,12 +39,13 @@
     },
     data () {
       return {
-         inventory: [
-      {name: 'Emploie', id: 1},
-      {name: 'Projet', id: 2},
-      {name: 'Informations', id: 3},
-      {name: 'Autre', id: 4}
-    ],
+      category: [
+              "emploie",
+              "projet",
+              "information",
+              "autre"
+          ],
+
       }
     },
     methods: {

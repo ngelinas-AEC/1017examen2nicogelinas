@@ -5,13 +5,13 @@
     <Profile v-if="showProfile" name='profile'/>
     <div v-else>
         <div class="title">
-          <h1>Acceuil</h1>
+        <h1>{{'accueil' | selectLangue(langue)}}</h1>
         </div>
         
         <div class="content img">
           <img
             class="resize"
-            src="https://images.freeimages.com/images/large-previews/b77/down-home-1228563.jpg"
+            src="../assets/ordi.png"
           />
         </div>
         <div class="normalize content">
@@ -31,9 +31,11 @@
 </template>
 
 <script >
+import {LanguesMixin}  from "../mixins/LanguesMixin";
 import Profile from '../views/Profile.vue'
 
 export default  {
+    mixins: [LanguesMixin],
     name: 'accueil',
     props: [],
     components: {
@@ -43,7 +45,7 @@ export default  {
     },
     data () {
       return {
-        showProfile: false
+        showProfile: true
       }
     },
     methods: {
