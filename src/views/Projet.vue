@@ -1,17 +1,8 @@
 <template lang="html">
 
   <section class="projet">
-        <h1>{{'projetlabel' | selectLangue(langue)}}</h1>
-   <div class="app-gridview">
-      <div class="grid-wrapper">
-          <div class="grid-row"> 
-        <ul class='projets'>
-                    <li v-for="(projet, i) in projets" :key="i"> <a :href="projet.lien" target="_blank"> {{ projet.nom | selectLangue(langue)}} {{ projet.lien }}</a> </li>
-        </ul>
-         </div>
-      </div>
-    </div> 
-
+      <h1>{{'projetlabel' | selectLangue(langue)}}</h1>      
+      <p v-for="(projet, i) in projets" :key="i"> <a :href="projet.lien" target="_blank"> {{ projet.nom | selectLangue(langue)}} </a> </p>
   </section>
 
 </template>
@@ -27,7 +18,8 @@
            projets: [
               {id:1, nom:"portfolio", lien:"http://portfolio.nicogelinas.ca"},
               {id:2, nom:"lecteurdenouvelles", lien:"https://github.com/ngelinas-AEC/AEC_Front_End/tree/master/programmation2/projet-final_Portfolio/"},
-              {ID:3, nom:"appvoyage", lien:"https://github.com/ngelinas-AEC/AEC_Front_End/tree/master/Programmation3/application-voyages/"}
+              {ID:3, nom:"appvoyage", lien:"https://github.com/ngelinas-AEC/AEC_Front_End/tree/master/Programmation3/application-voyages/"},
+              {ID:4, nom:"appvue", lien:"https://github.com/ngelinas-AEC/1017examen2nicogelinas/"}
           ]
       }
     },

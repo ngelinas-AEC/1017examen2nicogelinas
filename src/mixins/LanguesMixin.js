@@ -26,6 +26,7 @@ export const LanguesMixin = {
         portfolio: "Mon PortFolio personnel",
         lecteurdenouvelles: "React project réservation chalet",
         appvoyage: "Angular project réservation voyage",
+        appvue: "VUEJS PortFolio",
 
 
         bonjour: "Bonjour, je m'appelle Nico Gelinas",
@@ -35,7 +36,9 @@ export const LanguesMixin = {
         +"Je préconise le développemnt 'responsive design' qui est indispensable aujourd'hui avec les nombreux formats d'appareils"
         +"mobiles. Je suis en mesure de développer des applications mobiles et prendre en charge les"
         +"applications « back-end » utilisées par les solutions mobiles afin de contrôler l’accès aux données et à divers services."
-        +"J’implémente le développement par itération (Agile) me permettant la production d’un meilleur produit livrable."
+        +"J’implémente le développement par itération (Agile) me permettant la production d’un meilleur produit livrable.",
+
+        droit: "Tous droits réservés"
     },
     an: {
         accueil: "Home",
@@ -60,13 +63,17 @@ export const LanguesMixin = {
         portfolio: "My personal PortFolio",
         lecteurdenouvelles: "React chalet reservation",
         appvoyage: "Angular travel reservation",
+        appvue: "VUEJS PortFolio",
 
         bonjour: "Hello, I'm Nico Gelinas",
         jesuis: "I am a developer",
         texteapropos:"I have a passion for the development of intuitive and user-friendly systems. I specialize in mobile fields. "
         +"I advocate 'responsive design' development which is essential today with the many formats of mobile devices. "
         +"I am able to develop mobile applications and support back-end applications used by mobile solutions to control "
-        +"access to data and various services. I implement iteration development (Agile) allowing me to produce a better deliverable."
+        +"access to data and various services. I implement iteration development (Agile) allowing me to produce a better deliverable.",
+
+        droit: "All right reserved"
+
     },
     filters : {
         selectLangue: function (value, langue) {
