@@ -1,7 +1,9 @@
+<!-- Projet : composant qui permet d'afficher les différents projets -->
 <template lang="html">
 
   <section class="projet">
-      <h1>{{'projetlabel' | selectLangue(langue)}}</h1>      
+      <h1>{{'projetlabel' | selectLangue(langue)}}</h1>     
+      <!-- Boucle v-for qui affiche les projets --> 
       <p v-for="(projet, i) in projets" :key="i"> <a :href="projet.lien" target="_blank"> {{ projet.nom | selectLangue(langue)}} </a> </p>
   </section>
 
@@ -15,6 +17,7 @@
     
     data () {
       return {
+           // Array qui contient les nom et les liens des projets
            projets: [
               {id:1, nom:"portfolio", lien:"http://portfolio.nicogelinas.ca"},
               {id:2, nom:"lecteurdenouvelles", lien:"https://github.com/ngelinas-AEC/AEC_Front_End/tree/master/programmation2/projet-final_Portfolio/"},
@@ -25,13 +28,10 @@
     },
     props: [],
     mounted () {
-
     },
     methods: {
-
     },
     computed: {
-
     }
 }
 

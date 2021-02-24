@@ -1,3 +1,5 @@
+// Mixin : Contient les langues du projet web
+
 export const LanguesMixin = {
     data () {
         return {
@@ -75,6 +77,9 @@ export const LanguesMixin = {
         droit: "All right reserved"
 
     },
+    
+    /*  filtre qui verifie la langue choisieet retourne la valeur  */
+    
     filters : {
         selectLangue: function (value, langue) {
             if (langue === 'francais'){

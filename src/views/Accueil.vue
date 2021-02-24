@@ -1,7 +1,9 @@
+<!-- Acceuil : composant qui permet d'afficher le profile ou l'acceuil -->
+
 <template lang="html">
 
   <section class="accueil">
-
+    <!-- Condition v-if qui permet d'affiche le profil si l'utilisateur est connecté --> 
     <Profile v-if="showProfile" name='profile'/>
     <div v-else>
         <div class="title">
@@ -61,6 +63,7 @@ export default  {
   },
 }
 </script>
+
 <style scoped>
   .accueil {
   }

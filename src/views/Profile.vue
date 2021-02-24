@@ -1,9 +1,12 @@
+<!-- Profile : composant afficher lorsque l'utitlisateur est connecté -->
+
 <template lang="html">
 
   <section class="profile">
     
     <h1>{{'profile' | selectLangue(langue)}}</h1>
 
+    <!-- Grid qui affiche le profil utilisateur -->
     <div class="app-gridview">
       <div class="grid-wrapper">
           <div class="grid-row">
@@ -15,6 +18,7 @@
       </div>
     </div> 
     
+    <!-- Grid qui affiche les formations de l'utilisateur -->
     <div class="app-gridview">
       <div class="grid-wrapper">
           <div class="grid-row">
@@ -35,6 +39,7 @@
       <div class="grid-wrapper">
           <div class="grid-row">
           <h2>{{'competence' | selectLangue(langue)}}</h2>
+            <!-- Boucle v-for qui affiche les compétences -->
             <p v-for="competence in competences" :key="competence">{{competence}}</p>
           </div>
       </div>
@@ -47,7 +52,7 @@
 <script lang="js">
 import {LanguesMixin}  from "../mixins/LanguesMixin";
   export default  {
-     mixins: [LanguesMixin],
+    mixins: [LanguesMixin],
     name: 'profile',
     props: [],
     mounted () {
@@ -55,6 +60,7 @@ import {LanguesMixin}  from "../mixins/LanguesMixin";
     },
     data () {
       return {
+          // Array qui contient les compétences du menu navBar
           competences:[ "ANDROID STUDIO KOTLIN ECLIPSE DELPHI", "JAVASCRIPT/TYPESCRIPT, JQUERY, JQUERY MOBILE, PHP", "GOOGLE (FIREBASE-ANALYTICS) VMWARE(AIRWATCH) REST NODE.JS", "HTML CSS SASS SCSS BOOTSTRAP", "SQLSERVER SYBASE MYSQL ORACLE MONGODB", "REACT ANGULAR VUE", "AGILE-SPRING XML"]
       }
     },

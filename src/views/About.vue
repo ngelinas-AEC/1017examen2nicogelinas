@@ -1,3 +1,4 @@
+<!-- Profile : composant qui afficher le "a propos" de la page web -->
 <template>
   <div class="aboutclass">
     <div class="title">

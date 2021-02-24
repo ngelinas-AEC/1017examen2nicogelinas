@@ -1,15 +1,18 @@
+<!-- Header : élément commun à toutes les pages du site web qui contient le menu de navigation navBar -->
+
 <template lang="html">
-
   <section class="header">
+    <ul>
+        <!-- Boucle v-for qui affiche les options du menu navbar -->
+        <div v-for="select in menu" :key="select.id+select.name">
+          <li>        
+            <!-- Classe "LINK" permet de populer le menu navBar et créer le lien "ROUTER" -->
+            <router-link class="link" :to="{path:select.name}" tag="li">{{select.name | selectLangue(langue)}}</router-link>
+          </li>  
+        </div>   
+    </ul>
+  </section>
 
-  <ul>
-      <div v-for="select in menu" :key="select.id+select.name">
-        <li>        
-          <router-link class="link" :to="{path:select.name}" tag="li">{{select.name | selectLangue(langue)}}</router-link>
-        </li>  
-      </div>   
-  </ul>
- </section>
 </template>
 
 
@@ -25,6 +28,7 @@
     },
     data () {
       return {
+          // Array qui contient les options du menu navBar
           menu: [
               {id:1, name: 'accueil'},
               {id:2, name: 'projet'},

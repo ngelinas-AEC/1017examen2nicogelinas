@@ -1,6 +1,9 @@
+<!-- Footer : élément commun à toutes les pages du site web qui contient le copyright et l'anné de publication -->
+
 <template lang="html">
 
   <section class="footer">
+    <!-- Appel d'une directive : directivefooter  -->
     <div v-directivefooter> {{'droit' | selectLangue(langue)}} </div>
     
   </section>
@@ -16,6 +19,7 @@
     props: [],
     directives: {
       directivefooter: {
+       // Function hook bind : appelée une seule fois quand la directive est attachée à l’élément
        bind: function(el) {
           el.innerHTML = 'Copyright © ' + ' Nico Gelinas - ' +  new Date().getFullYear() + el.innerHTML;
           el.style.fontSize = 18 + 'px';
