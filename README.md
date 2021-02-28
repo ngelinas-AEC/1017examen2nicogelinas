@@ -1,16 +1,17 @@
-# 1017examen2nicogelinas
+Projet final Int�gration d'interface utilisateur - Nico Gelinas
 
-## Commande Question 1
+DESCRIPTION
 
-```
-vue create 1017examen2nicogelinas
-```
+Le projet est un portfolio r�alis� avec le Framework VueCli.
 
-## Commande Question 4
+C'est le projet final du cours Int�gration d'interface utilisateur qui a comme objectif l'aprentissage du framework VueJS
+C'est un des cours de l'AEC en D�velopment Front-end du C�gep Trois-Rivi�res.
 
-```
-vue add router
+BESOINS FONCTIONNELS
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# 1017examen2nicogelinas
+Les besoins fonctionnels se trouve dans le ficher Besoins fonctionnels.
+
+
+LICENSE
+
+La license se trouve dans le ficher License.md.
