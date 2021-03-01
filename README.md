@@ -11,7 +11,7 @@ C'est un des cours de l'AEC en Dévelopment Front-end du Cégep Trois-Rivières.
 ## TESTS UNITAIRES
 
 Les fichiers des tests unitaire se trouvent dans lerépertoire. 
-https://github.com/ngelinas-AEC/1017examen2nicogelinas/blob/main/__tests__
+https://github.com/ngelinas-AEC/1017examen2nicogelinas/blob/main/__tests__/
 
 
 ## BESOINS FONCTIONNELS

@@ -8,8 +8,7 @@
     <div v-else>
         <div class="title">
         <h1>{{'accueil' | selectLangue(langue)}}</h1>
-        </div>
-        
+        </div>      
         <div class="content img">
           <img
             class="resize"
