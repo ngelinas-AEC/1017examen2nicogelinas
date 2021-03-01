@@ -4,8 +4,9 @@
 
   <section class="footer">
     <!-- Appel d'une directive : directivefooter  -->
-    <div v-directivefooter> {{'droit' | selectLangue(langue)}} </div>
-    
+    <div v-directivefooter> {{'droit' | selectLangue(langue)}} 
+       - <a href="https://raw.githubusercontent.com/ngelinas-AEC/1017examen2nicogelinas/master/LICENSE" >LICENSE MIT</a>
+    </div>
   </section>
 
 </template>

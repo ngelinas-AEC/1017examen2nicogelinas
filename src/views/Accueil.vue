@@ -53,7 +53,7 @@ export default  {
     methods: {
     },
     computed: {
- },
+    },
     created() {
       let loggedIn = false;
   
